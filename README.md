@@ -1,5 +1,5 @@
-## Ex. No: 5  VLAN Configuration Using a Managed Switch
-Date:
+## Ex. No: 4  VLAN Configuration Using a Managed Switch
+Date: 29-10-2026
 ________________________________________
 # Objective
 To configure Virtual Local Area Networks (VLANs) on a managed switch and verify that hosts within the same VLAN can communicate while others cannot.
@@ -15,14 +15,22 @@ Description:<br>
 •	PC0 and PC1 are assigned to VLAN 10.<br>
 •	PC2 and PC3 are assigned to VLAN 20.<br>
 •	All PCs are connected to different ports on the same switch.<br>
-(Insert screenshot of your Packet Tracer setup here)<br>
+
+
+<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/5d62b7db-d9ad-43c8-9ceb-7d7dde0608ee" />
+
 ________________________________________
 # IP Addressing Table
-Device	VLAN	IP Address	Subnet Mask	Port<br>
-PC0	10	192.168.10.1	255.255.255.0	FastEthernet0/1<br>
-PC1	10	192.168.10.2	255.255.255.0	FastEthernet0/2<br>
-PC2	20	192.168.20.1	255.255.255.0	FastEthernet0/3<br>
-PC3	20	192.168.20.2	255.255.255.0	FastEthernet0/4<br>
+
+
+| Device | VLAN | IP Address | Subnet Mask | Port |
+| --- | --- | --- | --- | --- |
+| PC0 | 10 | 192.168.10.1 | 255.255.255.0 | FastEthernet0/1 |
+| PC1 | 10 | 192.168.10.2 | 255.255.255.0 | FastEthernet0/2 |
+| PC2 | 20 | 192.168.10.3 | 255.255.255.0 | FastEthernet0/3 |
+| PC3 | 20 | 192.168.10.4 | 255.255.255.0 | FastEthernet0/4 |
+
+
 ________________________________________
 # Procedure
 1.	Open Cisco Packet Tracer and add 4 PCs and 1 Switch.<br>
@@ -60,10 +68,22 @@ Switch(config-if-range)# switchport access vlan 20<br>
 Switch(config-if-range)# exit<br>
 ________________________________________
 # Output (Screenshots)
-•	VLAN configuration on switch<br>
-•	PC IP settings<br>
-•	Successful ping between PCs in the same VLAN<br>
-•	Failed ping between PCs in different VLANs<br>
+### VLAN configuration on switch:
+
+<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/72beeaa5-b80d-46de-8ec7-6cd8ba95ed0e" />
+
+### PC IP settings:
+
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/37989cbb-e395-4e04-8852-8f2ef70996cb" />
+
+
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/ce17ef1c-5abe-4175-8173-8bddccf11acf" />
+
+### Successful ping between PCs in the same VLAN and Failed ping between PCs in different VLANs:
+
+<img width="1908" height="917" alt="image" src="https://github.com/user-attachments/assets/4515fc8c-5276-46a3-995f-58df9354d49a" />
+
+
 ________________________________________
 # Result
 Successfully created and configured VLANs on a managed switch. Verified that only PCs within the same VLAN could communicate with each other.
